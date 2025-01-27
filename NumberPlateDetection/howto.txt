@@ -1,0 +1,12 @@
+laptop(server), phone(camera), and user phone shd be connected with the same wifi
+
+port 8000(django) -link1
+port 5000(this server)- link2
+video link - link 3
+
+update the link 1 and 3 in this server code 
+
+and then on user phone first open link1 and link3 
+then opne link 2 to use this properly
+
+user will get link2 to open in the phone
