@@ -1,0 +1,41 @@
+make the myenv if it is not there or else , not required
+
+python -m venv myevn
+myevn\Scripts\activate
+
+first create and run a python virtual environment in this directory from above code 
+and install the following librareis
+
+pip install mysqlclient
+pip install pymysql
+pip install djangorestframework
+pip install django-cors-headers
+pip install Pillow
+
+
+
+Install Tessaract engine on ur system 
+and add correct configurations in  "server/TrafficProject/myapp/utils/extract_license_number_from_image.py"
+
+Also make sure to change the database configuations in settings.py(line 81) according to your system
+
+Now before running the server , manually add the data in database by using the steps 
+provided in the following file. ( choose the short method )
+"TrafficProjectV5\Database\FinalData\How_to_Get_the_MySQL_Data_in_your_System.txt"
+
+Now you can run the following commands to do database migrations
+go to the project directory in ur terminal then type the following:
+( project directory mean ~cd server/TrafficProject )
+
+python manage.py makemigrations
+python manage.py migrate
+
+( the above is just to check if any migrations are left unchecking )
+now run the server:
+
+python manage.py runserver
+
+the above code will start the server , then run the client side code.
+make sure to update the API path on the cliend side code.
+
+the password and username of the admin interface is "savj"

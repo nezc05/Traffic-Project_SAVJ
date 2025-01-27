@@ -1,0 +1,38 @@
+There are two ways to do it, one is short way , on is long way.
+
+SHORT way
+
+1-Open the Command prompt in you system
+2- copy the file named "TrafficProjectSchema.sql"  to Your CWD (Current Working Directory)
+   ( or you can make your CWD as this directory)
+3- then write the following code:
+    " mysql -u [username] -p [New_database_name] < [input_file.sql] "
+e.g " mysql -u root -p TrafficProjectFinal < TrafficProjectSchema.sql "
+
+4- Make sure that , before u run this command the "New_database_name" i.e "TrafficProjectFinal" should already be created in your MySQL system.
+  i.e run this command in MySQL shell before running the above command in command prompt
+      " create database TrafficProjectFinal; "
+    
+
+
+LONG way
+
+1-create a new database in your MySQL system with the following name.
+ run the following command in MySQL shell.
+
+ e.g. " create database TrafficProjectDatabase; "
+ then " use TrafficProjectDatabase; "
+
+2- now copy paste the code in the file "TrafficProjectFinalSchema_MysqlCode.txt" to mysql shell after running the above code.
+Note: it is possible that if you try to copy paste all the 6 tables then it will only execute for first few tables and leave the last one, if that happens then copy paste the tables individually which were not executed
+
+3- Now the table structure is created in the database, now we need to fill the data.
+4- To fill the data run the python File named "EntringDataFromExcelToMysqltable.py" in "CodeHelp" Folder
+
+5- make sure to change the parameters like the "excel_file_path" and user and password details of the MySQL databse according to your system. 
+
+6- Once you run the python file data shd be added in the MySQL from excel.
+
+
+
+ 
